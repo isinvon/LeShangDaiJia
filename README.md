@@ -1,37 +1,61 @@
-# SpiritualCatDrivingAlliance
+# 项目总结
+## 1 项目功能
 
-#### 介绍
-灵猫代驾盟（SpiritualCatDrivingAlliance）的诞生，源于对当前代驾市场痛点的深刻洞察。我深知用户在寻求代驾服务时，渴望的不仅仅是一位司机将他们送回家，更是一个安全、可靠、高效且贴心的全程体验。因此，立志通过技术的力量和人性化的设计，重新定义代驾服务的标准。
+- 项目包含三部分：**乘客端、司机端**和管理端
+- 乘客端：
 
-#### 软件架构
-软件架构说明
+登录--选择代驾地址--呼叫代驾--等待接单--15分钟没有司机接单自动取消--15内有司机接单，司乘同显--账单支付
 
+- 司机端
 
-#### 安装教程
+登录--认证--开始接单--抢单--开始代驾--生成账单，发送乘客
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## 2 项目主要技术
 
-#### 使用说明
+- **微信小程序，微信开发者工具**
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+注册微信公众平台账号，小程序服务
+安装微信开发者工具
 
-#### 参与贡献
+- **idea导入后端代码**
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+- **MyBatisPlus**
 
+操作数据库
 
-#### 特技
+- **SpringBoot + SpringCloud**
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+Gateway、Nacos、OpenFeign
+
+- **Redis**
+
+登录使用Redis
+Redis里面Geo功能
+
+- **规则引擎Drools**
+
+代驾费用、分账、系统奖励
+
+- **分布式锁**
+
+分布式锁解决司机抢单，项目里面使用Redisson实现
+
+- **分布式事务**
+
+保证不同数据库里面数据的一致性
+项目使用Seata框架
+支付成功后处理
+
+- **RabbitMQ**
+
+保证数据最终一致性
+支付处理
+
+- **多线程**
+
+CompletableFuture是java.util.concurrent包里面类
+作用：原来使用串行执行的变为并行方式执行，提高代码执行速度
+
+- **任务调度 XXL-JOB**
+
+- 其他
