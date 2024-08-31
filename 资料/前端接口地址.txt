@@ -1,0 +1,4 @@
+1.5、前端接口地址
+前端微信小程序项目默认已编译好，不用修改配置。
+乘客端默认base地址：httplocalhost8600customer-api
+司机端默认base地址：httplocalhost8600driver-api
